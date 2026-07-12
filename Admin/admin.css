@@ -1,0 +1,152 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-color: #f4f6f9;
+}
+
+
+h1{
+    margin-bottom: 25px;
+    color: #333;
+}
+
+button{
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 6px;
+    background-color: red;
+    color: black;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover{
+    background-color: orange;
+}
+
+table{
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+
+th{
+    background-color:red;
+    color: white;
+    padding: 12px;
+}
+
+td{
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+tr:nth-child(even){
+    background-color: #f8f9fa;
+}
+
+tr:hover{
+    background-color: #e9ecef;
+}
+
+
+.container{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 50px;
+    flex-wrap: wrap;
+}
+
+.card{
+    width: 18rem;
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: 0.3s ease;
+}
+
+.card:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.3);
+}
+
+.card img{
+    height: 180px;
+    object-fit: cover;
+}
+
+.card-body{
+    text-align: center;
+}
+
+.card-title{
+    font-size: 22px;
+    font-weight: bold;
+    color: #333;
+}
+
+.card-text{
+    color: #666;
+    font-size: 15px;
+}
+
+
+h1{
+    background-color: black;
+    color: goldenrod;
+    font-size: 4rem;
+}
+
+
+/* ---------- Media Query ---------- */
+
+/* Tablets */
+@media (max-width: 992px){
+    .d-flex{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .card{
+        width: 45% !important;
+        margin-bottom: 20px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 576px){
+    .d-flex{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card{
+        width: 90% !important;
+    }
+
+    h1{
+        font-size: 2rem;
+    }
+}
+
+footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: black;
+    color:rgb(246, 210, 5);
+    text-align: center;
+    padding: 15px;
+}

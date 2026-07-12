@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" href="admin.css">
+    <script src="admin.js"></script>
+</head>
+<body>
+
+        <center>
+        <h1>Admin Page</h1>
+
+<div class="container mt-5">
+    <div class="d-flex flex-wrap justify-content-center gap-6"></div>
+
+        <!-- View Agents -->
+        <div class="card" style="width: 18rem;">
+            <img src="sword.webp" class="card-img-top" alt="View Agent">
+            <div class="card-body">
+                <h5 class="card-title">View All Agents</h5>
+                <p class="card-text">
+                    View All Agent
+                </p>
+                
+        <button onclick="showTable()">All Agent</button>
+            </div>
+        </div>
+
+        <!-- Add New Agent -->
+        <div class="card" style="width: 18rem;">
+            <img src="hammer.webp" class="card-img-top" alt="Add Agent">
+            <div class="card-body">
+                <h5 class="card-title">Add Agent</h5>
+                <p class="card-text">
+                    Add New Agent
+                </p>
+                <button>New Agent</button>
+                
+            </div>
+        </div>
+
+        <!-- Assign Task  -->
+        <div class="card" style="width: 18rem;">
+            <img src="forge.jpeg"class="card-img-top" alt="Assign Task">
+            <div class="card-body">
+                <h5 class="card-title">Assign Task</h5>
+                <p class="card-text">
+                    Assign Task to Customer.
+                </p>
+                <button>Assign task</button>
+            </div>
+        </div>
+
+            <!-- Ongoing Task  -->
+        <div class="card" style="width: 18rem;">
+            <img src="sand.avif" class="card-img-top" alt="Assign Task">
+            <div class="card-body">
+                <h5 class="card-title">Ongoing Task</h5>
+                <p class="card-text">
+                    Ongoing Task.
+                </p>
+                <button>Ongoing Task</button>
+            </div>
+        </div>
+
+
+        <!-- Customer Feedback  -->
+        <div class="card" style="width: 18rem;">
+            <img src="fire.jpeg"card-img-top" alt="Customer Feedback">
+            <div class="card-body">
+                <h5 class="card-title"> Customer Feedback</h5>
+                <p class="card-text">
+                    Customer Feedback.
+                </p>
+            <button>Customer Feedback</button>    
+            </div>
+        </div>
+
+    </div>
+</div>
+        <br><br>
+
+        <table id="userTable" border="2" style="display: none;">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Department</th>
+                </tr>
+            </thead>
+
+            <tbody id="userData"></tbody>
+        </table>
+
+        <br>
+
+        <button id="getBtn" onclick="getUsers()" style="display: none;">
+            GET
+        </button>
+    </center>
+
+   <!-- <footer>
+    <p class="mb-1">Contact Admin : admintams@gmail.com </p>
+    
+</footer> -->
+</body>
+</html>

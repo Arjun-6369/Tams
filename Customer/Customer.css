@@ -1,0 +1,131 @@
+body{
+    background-color: rgb(247, 213, 149);
+    font-family: poppins;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 50px;
+    flex-wrap: wrap;
+}
+
+.card{
+    background-color: rgb(236, 198, 126);
+    width: 18rem;
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: 0.3s ease;
+}
+
+.card:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.3);
+}
+
+.card img{
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-body{
+    text-align: center;
+}
+
+.card-title{
+    font-size: 22px;
+    font-weight: bold;
+    color: black;
+}
+
+.card-text{
+    color:black;
+    font-size: 1.5rem;
+}
+
+.btn{
+    width: 100%;
+    border-radius: 8px;
+}
+
+h1{
+    background-color: rgb(135, 90, 6);
+    color: rgb(19, 14, 1);
+    font-size: 4rem;
+}
+
+.card{
+    transition: 0.3s;
+}
+
+.card:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.card img{
+    height: 200px;
+    object-fit: cover;
+}
+
+/* ---------- Media Query ---------- */
+
+/* Tablets */
+@media (max-width: 992px){
+    .d-flex{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .card{
+        width: 45% !important;
+        margin-bottom: 20px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 576px){
+    .d-flex{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card{
+        width: 90% !important;
+    }
+
+    h1{
+        font-size: 2rem;
+    }
+}
+
+footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background:rgb(135, 90, 6);
+    color:black;
+    text-align: center;
+    padding: 15px;
+    font-family: poppins;
+    font-size: 2rem;
+}
+
+button{
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 6px;
+    background-color: rgb(240, 189, 94);
+    color: black;
+    font-size: 26px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+button:hover{
+    background-color: orange;
+}
