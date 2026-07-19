@@ -3,111 +3,145 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Page</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-    
+    <title>Admin Dashboard | TAMS</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="admin.css">
+
+    <!-- JavaScript -->
     <script src="admin.js"></script>
 </head>
+
 <body>
 
-        <center>
-        <h1>Admin Page</h1>
+<div class="container py-5">
 
-<div class="container mt-5">
-    <div class="d-flex flex-wrap justify-content-center gap-6"></div>
+    <h1 class="text-center mb-5">⚔️ TAMS Admin Dashboard</h1>
 
-        <!-- View Agents -->
-        <div class="card" style="width: 18rem;">
-            <img src="sword.webp" class="card-img-top" alt="View Agent">
-            <div class="card-body">
+    <!-- Cards -->
+    <div class="d-flex flex-wrap justify-content-center gap-5">
+
+        <!-- View All Agents -->
+        <div class="card">
+            <img src="sword.webp" class="card-img-top" alt="View Agents">
+
+            <div class="card-body text-center">
                 <h5 class="card-title">View All Agents</h5>
+
                 <p class="card-text">
-                    View All Agent
+                    Display every registered agent in the system.
                 </p>
-                
-        <button onclick="showTable()">All Agent</button>
+
+                <button onclick="showTable()">View Agents</button>
             </div>
         </div>
 
-        <!-- Add New Agent -->
-        <div class="card" style="width: 18rem;">
+        <!-- Add Agent -->
+        <div class="card">
             <img src="hammer.webp" class="card-img-top" alt="Add Agent">
-            <div class="card-body">
-                <h5 class="card-title">Add Agent</h5>
+
+            <div class="card-body text-center">
+                <h5 class="card-title">Add New Agent</h5>
+
                 <p class="card-text">
-                    Add New Agent
+                    Register a new field agent.
                 </p>
+
                 <button>New Agent</button>
-                
             </div>
         </div>
 
-        <!-- Assign Task  -->
-        <div class="card" style="width: 18rem;">
-            <img src="forge.jpeg"class="card-img-top" alt="Assign Task">
-            <div class="card-body">
+        <!-- Assign Task -->
+        <div class="card">
+            <img src="forge.jpeg" class="card-img-top" alt="Assign Task">
+
+            <div class="card-body text-center">
                 <h5 class="card-title">Assign Task</h5>
+
                 <p class="card-text">
-                    Assign Task to Customer.
+                    Assign tasks to available agents.
                 </p>
-                <button>Assign task</button>
+
+                <button>Assign Task</button>
             </div>
         </div>
 
-            <!-- Ongoing Task  -->
-        <div class="card" style="width: 18rem;">
-            <img src="sand.avif" class="card-img-top" alt="Assign Task">
-            <div class="card-body">
-                <h5 class="card-title">Ongoing Task</h5>
+        <!-- Ongoing Tasks -->
+        <div class="card">
+            <img src="sand.avif" class="card-img-top" alt="Ongoing Task">
+
+            <div class="card-body text-center">
+                <h5 class="card-title">Ongoing Tasks</h5>
+
                 <p class="card-text">
-                    Ongoing Task.
+                    Monitor current task progress.
                 </p>
-                <button>Ongoing Task</button>
+
+                <button>View Tasks</button>
             </div>
         </div>
 
+        <!-- Customer Feedback -->
+        <div class="card">
+            <img src="fire.jpeg" class="card-img-top" alt="Customer Feedback">
 
-        <!-- Customer Feedback  -->
-        <div class="card" style="width: 18rem;">
-            <img src="fire.jpeg"card-img-top" alt="Customer Feedback">
-            <div class="card-body">
-                <h5 class="card-title"> Customer Feedback</h5>
+            <div class="card-body text-center">
+                <h5 class="card-title">Customer Feedback</h5>
+
                 <p class="card-text">
-                    Customer Feedback.
+                    Review customer ratings and feedback.
                 </p>
-            <button>Customer Feedback</button>    
+
+                <button>Feedback</button>
             </div>
         </div>
 
     </div>
-</div>
-        <br><br>
 
-        <table id="userTable" border="2" style="display: none;">
-            <thead>
+    <!-- Table -->
+    <div class="mt-5">
+
+        <table id="userTable" class="table table-bordered table-hover text-center" style="display:none;">
+
+            <thead class="table-dark">
+
                 <tr>
                     <th>ID</th>
                     <th>Name</th>
                     <th>Age</th>
                     <th>Department</th>
                 </tr>
+
             </thead>
 
             <tbody id="userData"></tbody>
+
         </table>
 
-        <br>
+        <div class="text-center">
 
-        <button id="getBtn" onclick="getUsers()" style="display: none;">
-            GET
-        </button>
-    </center>
+            <button id="getBtn"
+                    onclick="getUsers()"
+                    style="display:none; width:200px;">
+                GET USERS
+            </button>
 
-   <!-- <footer>
-    <p class="mb-1">Contact Admin : admintams@gmail.com </p>
-    
-</footer> -->
+        </div>
+
+    </div>
+
+</div>
+
+<!-- Footer -->
+
+<footer class="text-center py-4 mt-5">
+    <p class="mb-1">Task Assignment & Management System</p>
+    <small>Admin Panel © 2026</small>
+</footer>
+
 </body>
 </html>
