@@ -103,7 +103,7 @@ a{
 
 
 
-@media screen and (max-width: 768px) {
+@media (max-width:768px){
 
     .container{
         width:90%;
@@ -113,28 +113,18 @@ a{
     h1{
         font-size:32px;
         line-height:1.3;
-        margin-bottom:30px;
     }
 
     .button-group{
         display:flex;
         flex-direction:column;
         align-items:center;
-        gap:20px;
-        width:100%;
-    }
-
-    .button-group a{
-        width:100%;
-        display:flex;
-        justify-content:center;
-        text-decoration:none;
+        gap:18px;
     }
 
     .btn{
-        width:280px;
-        height:60px;
-        font-size:22px;
-        border-radius:12px;
+        width:180px;
+        height:55px;
+        font-size:20px;
     }
 }
